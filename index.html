@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping pong v1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid !direction !spacing">
+        <div class="row justify-content-center d-flex">
+            <div class="col-3">
+                <div class="card shadow" style="width:30rem;">
+                    <img src="https://images.unsplash.com/photo-1584813539806-2538b8d918c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">ping pong score keeper</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center d-flex">
+            <div class="col-3">
+                <div class="card shadow" style="width:30rem;">
+                    <div class="card-body">
+                        <h3 class="card-title"><span id="score-1">0</span> to <span id="score-2">0</span></h3>
+                        <!-- <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6> -->
+                        <p class="card-text">use the button below to keep score</p>
+                        <p class="card-text">
+                            Playing To
+                            <span>
+                                <select name="score-select" id="score-select">
+                                </select>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center d-flex">
+            <div class="col-3">
+                <button id='p1' type="button" class="btn btn-primary col-3">1+ Player One</button>
+                <button id='p2' type="button" class="btn btn-success col-3">1+ Player Two</button>
+                <button id='reset' type="button" class="btn btn-danger col-3">Reset</button>
+            </div>
+        </div>
+    </div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
