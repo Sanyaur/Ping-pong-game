@@ -9,7 +9,7 @@ const p2 = {
 }
 
 const dropdownSelection = document.querySelector('#score-select')
-const reset = document.querySelector('#reset')
+const resetButton = document.querySelector('#reset')
 
 // creating dropdown options
 for (let i = 5; i < 11; i++) {
@@ -38,13 +38,21 @@ let setMaxPointFromDropdown = (point) => {
     }
 }
 
+let resetFunction = () => {
+    for (const p of [p1, p2]) {
+        p.score.innerText = 0
+        p.score.removeAttribute('style')
+        p.button.disabled = false;
+    }
+}
+
 let maxPoint = dropdownSelection.value
-// console.log(maxPoint)
 setMaxPointFromDropdown(maxPoint)
 
 dropdownSelection.addEventListener('change', (event) => {
     maxPoint = Number(event.target.value)
     setMaxPointFromDropdown(maxPoint)
+    resetFunction()
 })
 
 p1.button.addEventListener('click', function () {
@@ -58,10 +66,4 @@ p2.button.addEventListener('click', function () {
     setMaxPointFromDropdown(maxPoint)
 })
 
-reset.addEventListener('click', () => {
-    for (const p of [p1, p2]) {
-        p.score.innerText = 0
-        p.score.removeAttribute('style')
-        p.button.disabled = false;
-    }
-})
+resetButton.addEventListener('click', resetFunction)
